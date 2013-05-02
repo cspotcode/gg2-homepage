@@ -1,38 +1,36 @@
 {
-    "name": "gg2-homepage",
-    "version": "0.1.0",
-    "private": true,
-    "description": "Homepage for Gang Garrison 2",
-    "homepage": "TODO",
-    "keywords": [
-    ],
-    "author": "Faucet Software",
-    "maintainers": [
-    ],
-    "contributors": [
-    ],
-    "bugs": {
-        "url": "TODO"
-    },
-    "repository" : {
-        "type" : "git",
-        "url" : "TODO"
-    },
-    "engines" : {
-        "node": "0.8.x",
-        "npm": "1.1.x"
-    },
-    "dependencies": {
-        "docpad": "6.x",
-        "docpad-plugin-coffeescript": "2.x",
-        "docpad-plugin-eco": "2.x",
-        "docpad-plugin-marked": "2.x",
-        "docpad-plugin-partials": "2.x",
-        "docpad-plugin-stylus": "2.x",
-        "docpad-plugin-text": "2.x"
-    },
-    "devDependencies": {
-        "docpad-plugin-livereload": "2.x"
-    },
-    "main": "node_modules/docpad/bin/docpad-server"
+  "name": "gg2-homepage",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Homepage for Gang Garrison 2",
+  "homepage": "TODO",
+  "keywords": [],
+  "author": "Faucet Software",
+  "maintainers": [],
+  "contributors": [],
+  "bugs": {
+    "url": "TODO"
+  },
+  "repository": {
+    "type": "git",
+    "url": "TODO"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "dependencies": {
+    "docpad": "6.x",
+    "docpad-plugin-coffeescript": "2.x",
+    "docpad-plugin-eco": "2.x",
+    "docpad-plugin-marked": "2.x",
+    "docpad-plugin-partials": "2.x",
+    "docpad-plugin-stylus": "2.x",
+    "docpad-plugin-text": "2.x",
+    "docpad-plugin-jade": "~2.3.1"
+  },
+  "devDependencies": {
+    "docpad-plugin-livereload": "2.x"
+  },
+  "main": "node_modules/docpad/bin/docpad-server"
 }
