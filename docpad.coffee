@@ -8,6 +8,12 @@ docpadConfig = {
   airbrakeToken: 'a'
   mixpanelToken: 'a'
 
+  # Plugin config
+  plugins:
+    jade:
+      jadeOptions:
+        basedir: require('path').resolve './src'
+
 	# =================================
 	# Template Data
 	# These are variables that will be accessible via our templates
