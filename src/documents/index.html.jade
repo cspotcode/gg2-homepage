@@ -7,18 +7,25 @@ article
         aside#dl-aside
             a(href="download.php?file=1"): img(src="./img/dlhttp.png", alt="Download via HTTP")
             br
-            | This version was downloaded 12390 times!
+            = "This version was downloaded "
+            if useSSI
+                //#include file="downloads/dlcount.txt"
+            else
+                | 12568
+            = " times!"
             br
             a(href="download.html") Other Downloads
         p Gang Garrison 2 is a free multiplayer 'demake' of Valve's Team Fortress 2. With all 9 classes, many different TF2-inspired environments, and fast-paced, team-based, multiplayer gameplay represented, GG2 is the premier TF2 tribute/parody/alternative.
         p It was originally conceived by mrfredman and MedO for the 2008 TIGSource.com 'Bootleg Demake' competition, with many developers later adding new features.
     section
         h2#news News
-        //- TODO replace this section with the PHP SSI code
-        ul
-            li: a(href="/forums/index.php?topic=33744.0") Server move successful!
-            li: a(href="/forums/index.php?topic=33740.0") Downtime notice: GG2(F) is moving server today.
-            li: a(href="/forums/index.php?topic=33610.0") Gang Garrison 2.5.1
-            li: a(href="/forums/index.php?topic=33601.0") Gang Garrison 2.5
-            li: a(href="/forums/index.php?topic=33584.0") Haxxy reward logins have been sent out
-            li: a(href="/forums/index.php?topic=33402.0") Downtime notice / possible change of hosting
+        if useSSI
+            //- TODO add the PHP SSI code
+        else
+            ul
+                li: a(href="/forums/index.php?topic=33744.0") Server move successful!
+                li: a(href="/forums/index.php?topic=33740.0") Downtime notice: GG2(F) is moving server today.
+                li: a(href="/forums/index.php?topic=33610.0") Gang Garrison 2.5.1
+                li: a(href="/forums/index.php?topic=33601.0") Gang Garrison 2.5
+                li: a(href="/forums/index.php?topic=33584.0") Haxxy reward logins have been sent out
+                li: a(href="/forums/index.php?topic=33402.0") Downtime notice / possible change of hosting
