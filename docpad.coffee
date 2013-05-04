@@ -43,18 +43,21 @@ docpadConfig = {
 				TODO place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
 				"""
 
+      # TODO currently all site-specific styles and scripts are included directly
+      # in the default template instead of being listed here
+
 			# The website's styles
 			styles: [
-				'/vendor/normalize.css'
-				'/vendor/h5bp.css'
-				'/styles/style.css'
+				#'/vendor/normalize.css'
+				#'/vendor/h5bp.css'
+				#'/styles/style.css'
 			]
 
 			# The website's scripts
 			scripts: [
-				'/vendor/log.js'
-				'/vendor/modernizr.js'
-				'/scripts/script.js'
+				#'/vendor/log.js'
+				#'/vendor/modernizr.js'
+				#'/scripts/script.js'
 			]
 
 

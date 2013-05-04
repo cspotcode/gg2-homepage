@@ -1,0 +1,86 @@
+!!! 5
+| <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+| <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+| <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+| <!--[if gt IE 8]><!-->
+html.no-js
+    | <!--<![endif]-->
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        meta(name='viewport', content='width=device-width')
+
+        // Site Properties
+        title= getPreparedTitle()
+        meta(name="description", content=getPreparedDescription())
+        meta(name="keywords", content=getPreparedKeywords())
+
+        // DocPad Meta
+        != getBlock('meta').toHTML()
+
+        //- I am not 100% sure if this is better than just listing all styles in this template
+        //- DocPad Styles + Our Own
+        != getBlock('styles').add(site.styles).toHTML()
+
+        link(rel='stylesheet', href='css/bootstrap.min.css')
+        style
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        link(rel='stylesheet', href='css/bootstrap-responsive.min.css')
+        link(rel='stylesheet', href='css/main.css')
+
+        //- TODO re-enable this once we figure out how to render all these icons from our source image
+            // Icons
+            // Favicon
+            link(rel="shortcut icon", href="/icons/favicon.ico")
+            // For non-Retina iPhone, iPod Touch, and Android 2.1+ devices:
+            link(rel="apple-touch-icon-precomposed", href="icons/apple-touch-icon-57x57-precomposed.png")
+            // For first- and second-generation iPad:
+            link(rel="apple-touch-icon-precomposed", sizes="72x72", href="icons/apple-touch-icon-72x72-precomposed.png")
+            // For iPhone with high-resolution Retina display:
+            link(rel="apple-touch-icon-precomposed", sizes="114x114", href="icons/apple-touch-icon-114x114-precomposed.png")
+            // For third-generation iPad with high-resolution Retina display:
+            link(rel="apple-touch-icon-precomposed", sizes="144x144", href="icons/apple-touch-icon-144x144-precomposed.png")
+
+        script(src='js/vendor/modernizr-2.6.2-respond-1.1.0.min.js')
+    body
+        //if lt IE 7
+            p.chromeframe
+                | You are using an
+                strong outdated
+                | browser. Please
+                a(href='http://browsehappy.com/') upgrade your browser
+                | or
+                a(href='http://www.google.com/chromeframe/?redirect=true') activate Google Chrome Frame
+                | to improve your experience.
+
+        != content
+
+        //- TODO I'm not sure if using this is better than just listing all scripts in this template
+        //- DocPad Scripts + Our Own
+        != getBlock('scripts').add(site.scripts).toHTML()
+
+        //- jQuery
+        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+        script
+            window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
+
+        //- Bootstrap
+        script(src='js/vendor/bootstrap.min.js')
+
+        //- H5BP's plugins.js
+        script(src='js/plugins.js')
+
+        //- Our scripts
+        script(src='js/main.js')
+
+        //- Google Analytics
+        //- TODO re-enable this?
+        //-
+            script
+                var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+                (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g,s)}(document,'script'));
