@@ -1,0 +1,37 @@
+---
+layout: 'gg2-header-footer'
+---
+article
+    section
+        h2 Main Download
+        a(href="/download.php?file=1"): img(src="../img/dlhttp.png", alt="Download via HTTP")
+        br
+        = "This version was downloaded "
+        if useSSI
+            //#include file="downloads/dlcount.txt"
+        else
+            | 12568
+        = " times!"
+        br
+    section
+        h2 Other Downloads
+        h3 Map Packs
+        a(href="/classicMapPack.zip") Classic Map Pack
+        h3 Music
+        p To play a song, left-click on it.
+        p To download a song, right-click, select 'Save Link As...' and choose the destination for the download.
+        a(href="/Father%20of%20Syn%20-%20Gang%20Garrison%20II.mp3") Father of Syn - Gang Garrison II
+        br
+        a(href="/Father%20of%20Syn%20-%20Gang%20Garrison%20II%20%28In-Game%29.mp3") Father of Syn - Gang Garrison II (In-Game)
+        br
+        a(href="/Scoot%20-%20Gang%20Garrison%20Rocket%20Jump%20Waltz.mp3") Scoot - Gang Garrison Rocket Jump Waltz
+        br
+        a(href="/Elkondo%20-%20Petite%20Chou-Fleur%20%288-bit%29.mp3") Elkondo - Petite Chou-Fleur (8-bit)
+        br
+        a(href="/Elkondo%20-%20Right%20Behind%20You%20%288-bit%29.mp3") Elkondo - Right Behind You (8-bit)
+        br
+        h3 Sprites
+        a(href="/Class_Sprites.rar") In-game sprites
+        br
+        a(href="/Class_Portraits.rar") Class portraits
+        br
