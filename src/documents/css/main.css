@@ -10,12 +10,12 @@ body {
     font-family: Arial, sans-serif;
     position: relative;
     background-color: rgb(114, 98, 85);
-    background: url(/new/img/logorepeat.png), linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
-    background: url(/new/img/logorepeat.png), -o-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
-    background: url(/new/img/logorepeat.png), -moz-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
-    background: url(/new/img/logorepeat.png), -webkit-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
-    background: url(/new/img/logorepeat.png), -ms-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
-    background: url(/new/img/logorepeat.png), -webkit-gradient(
+    background: url(../img/logorepeat.png), linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
+    background: url(../img/logorepeat.png), -o-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
+    background: url(../img/logorepeat.png), -moz-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
+    background: url(../img/logorepeat.png), -webkit-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
+    background: url(../img/logorepeat.png), -ms-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
+    background: url(../img/logorepeat.png), -webkit-gradient(
             linear,
             left bottom,
             80% 20%,
@@ -47,7 +47,7 @@ article {
     width: 800px;
     margin: 0 auto;
 //background-color: rgb(30, 18, 19);
-//background-image: url(/new/img/menubg3.png);
+//background-image: url(../img/menubg3.png);
 //background-repeat: no-repeat;
     min-height: 780px;
     color: white;
@@ -78,7 +78,7 @@ header {
     display: block;
     font-size: 0;
     height: 80px;
-    background-image: url(/new/img/logomini.png);
+    background-image: url(../img/logomini.png);
     background-repeat: no-repeat;
     width: 345px;
     float: left;
@@ -86,7 +86,7 @@ header {
 
 #home #logo {
     height: 232px;
-    background-image: url(/new/img/logo.png);
+    background-image: url(../img/logo.png);
     background-repeat: no-repeat;
     width: 800px;
     float: none;
