@@ -1,3 +1,6 @@
+//- This template does not contain anything GG2-specific, except for referencing our stylesheets.
+//- It's purpose is for holding all the HTML best-practices from HTML5 Boilerplate.  If we add analytics stuff, that'll
+//- go here as well.
 !!! 5
 | <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 | <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -45,7 +48,7 @@ html.no-js
             link(rel="apple-touch-icon-precomposed", sizes="144x144", href="icons/apple-touch-icon-144x144-precomposed.png")
 
         script(src='js/vendor/modernizr-2.6.2-respond-1.1.0.min.js')
-    body
+    body(id=getDocument().getMeta().get('isHome') ? "home" : false)
         //if lt IE 7
             p.chromeframe
                 | You are using an
