@@ -60,6 +60,10 @@ docpadConfig = {
             #'/scripts/script.js'
         ]
 
+        # Whether or not the templates should render PHP or SSI code.
+        # E.g. the download counter or the News section.
+        # During development, this can be false.  When rendering to upload to the actual website, set it to yes.
+        useSSI: false
 
         # -----------------------------
         # Helper Functions
