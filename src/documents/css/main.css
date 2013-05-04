@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background-color: rgb(114, 98, 85);
+    background: url(/new/img/logorepeat.png), linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
+    background: url(/new/img/logorepeat.png), -o-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
+    background: url(/new/img/logorepeat.png), -moz-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
+    background: url(/new/img/logorepeat.png), -webkit-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
+    background: url(/new/img/logorepeat.png), -ms-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
+    background: url(/new/img/logorepeat.png), -webkit-gradient(
+            linear,
+            left bottom,
+            80% 20%,
+            color-stop(0.18, rgb(48,30,32)),
+            color-stop(1, rgb(219,189,164))
+    );
+    background-size: auto, 100%;
+    background-repeat: repeat-x;
+    background-position: 0 -152px, 0 80px;
+}
+
+body#home {
+    background-position: 0 0, 0 232px;
+}
+
+a {
+    color: orange;
+}
+
+img {
+    border: none;
+    display: block;
+}
+
+article {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12pt;
+    width: 800px;
+    margin: 0 auto;
+//background-color: rgb(30, 18, 19);
+//background-image: url(/new/img/menubg3.png);
+//background-repeat: no-repeat;
+    min-height: 780px;
+    color: white;
+    overflow: hidden;
+    clear: both;
+}
+
+section {
+    padding: 0 0.8em 0 0.8em;
+}
+
+.floater {
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+}
+
+.footnote {
+    font-size: smaller;
+}
+
+header {
+    overflow: hidden;
+    clear: both;
+}
+
+#logo {
+    display: block;
+    font-size: 0;
+    height: 80px;
+    background-image: url(/new/img/logomini.png);
+    background-repeat: no-repeat;
+    width: 345px;
+    float: left;
+}
+
+#home #logo {
+    height: 232px;
+    background-image: url(/new/img/logo.png);
+    background-repeat: no-repeat;
+    width: 800px;
+    float: none;
+    clear: both;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 0px;
+    clear: both;
+}
+#news-content .windowbg {
+    margin: 0;
+}
+table th {
+    vertical-align: top;
+    align: right;
+}
+table th img {
+    float: right;
+}
+
+nav {
+    float: left;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+#home nav {
+    background-color: rgb(126, 57, 50);
+    float: none;
+    clear: both;
+    margin: 0;
+}
+
+nav ul {
+    padding: 4px;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0 12px;
+    display: inline-block;
+    font-size: 12pt;
+    font-family: Lucida Console, monospace;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(126, 57, 50);
+    padding: 4px;
+    text-align: center;
+    clear: both;
+}
+
+footer a {
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+#dl-aside {
+    float: right;
+    margin: 15px;
+}
+
+#seekrit {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    cursor: default;
+}
+
+#seekrit:hover {
+    background: url(/favicon.ico);
+}
+
+
+
+
+
+
