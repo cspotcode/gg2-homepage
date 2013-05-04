@@ -46,10 +46,10 @@ article {
     font-size: 12pt;
     width: 800px;
     margin: 0 auto;
-    min-height: 780px;
 /*background-color: rgb(30, 18, 19);*/
 /*background-image: url(../img/menubg3.png);*/
 /*background-repeat: no-repeat;*/
+    /*min-height: 780px;*/
     color: white;
     overflow: hidden;
     clear: both;
@@ -172,8 +172,23 @@ footer a {
     background: url(/favicon.ico);
 }
 
+/* Styles for flushing the footer to the bottom of the page,
+ * in case the page's content is shorter than the browser window */
+html, body {
+    height: 100%;
+}
 
+.page-wrapper {
+    min-height: 100%;
+}
 
+.page-content {
+    overflow: auto;
+    padding-bottom: 29px; /* height of the footer */
+}
 
-
+footer {
+    position: relative;
+    margin-top: -29px; /* height of the footer */
+}
 

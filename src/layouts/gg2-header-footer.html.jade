@@ -2,15 +2,17 @@
 layout: default
 ---
 //- This is our standards GG2 website template: standard header and footer
-header
-    a#logo(href="/") Gang Garrison 2
-    nav
-        ul
-            li: a(href="/") Home
-            li: a(href="./irc.html?breakcache") IRC
-            li: a(href="/forums/") Forums
+.page-wrapper
+    .page-content
+        header
+            a#logo(href="/") Gang Garrison 2
+            nav
+                ul
+                    li: a(href="/") Home
+                    li: a(href="./irc.html?breakcache") IRC
+                    li: a(href="/forums/") Forums
 
-!= content
+        != content
 
 footer
     .flattrbutton
