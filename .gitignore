@@ -1,2 +1,5 @@
 node_modules/
 out/
+
+# Compiled Bootstrap CSS
+src/files/css/bootstrap*
