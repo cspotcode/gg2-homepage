@@ -270,20 +270,34 @@
 
 
 // Default 940px grid
+// For GG2, replace with a 760px grid (800px - 20px padding on both sides)
 // -------------------------
 @gridColumns:             12;
-@gridColumnWidth:         60px;
-@gridGutterWidth:         20px;
+// Original values
+/*@gridColumnWidth:         60px;
+@gridGutterWidth:         20px;*/
+// Values for 800px container
+/*@gridColumnWidth:         52px;
+@gridGutterWidth:         16px;*/
+// Values for 760px container + 18px padding on either side
+@gridColumnWidth:         49px;
+@gridGutterWidth:         16px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 // 1200px min
-@gridColumnWidth1200:     70px;
-@gridGutterWidth1200:     30px;
+// Don't do this, it's too wide for GG2
+//@gridColumnWidth1200:     70px;
+//@gridGutterWidth1200:     30px;
+@gridColumnWidth1200:     49px;
+@gridGutterWidth1200:     16px;
 @gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
 
 // 768px-979px
-@gridColumnWidth768:      42px;
-@gridGutterWidth768:      20px;
+// Our cutoff has been changed to 800px, so we can fit our standard grid here
+//@gridColumnWidth768:      42px;
+//@gridGutterWidth768:      20px;
+@gridColumnWidth768:      49px;
+@gridGutterWidth768:      16px;
 @gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
 
 
