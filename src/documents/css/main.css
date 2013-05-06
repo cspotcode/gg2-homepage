@@ -74,7 +74,13 @@ header {
     clear: both;
 }
 
-#logo {
+.narrow-header {
+    background: rgb(126, 57, 50);
+    background: #7E3932 url(../img/logorepeat.png) repeat-x;
+    background-position: 0 -152px, 0 80px;
+}
+
+.logo-mini {
     display: block;
     font-size: 0;
     height: 80px;
@@ -84,6 +90,7 @@ header {
     float: left;
 }
 
+/* TODO remove this? */
 #home #logo {
     height: 232px;
     background-image: url(../img/logo.png);
@@ -112,7 +119,7 @@ table th img {
 nav {
     float: left;
     margin-left: 10px;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 
 #home nav {
@@ -123,15 +130,15 @@ nav {
 }
 
 nav ul {
-    padding: 4px;
+    padding: 4px 0 4px;
     margin: 0;
     overflow: hidden;
     text-align: center;
 }
 
 nav ul li {
-    list-style-type: none;
-    margin: 0 12px;
+    /*list-style-type: none;*/
+    margin: 0 6px;
     display: inline-block;
     font-size: 12pt;
     font-family: 'Conv_PressStart2P', Lucida Console, monospace;
@@ -224,4 +231,14 @@ h1, h2, h3, h4, h5, h6 {
 .center-column {
     /*background: #595959;*/
     background: #505050;
+}
+
+/* When the screen is wide enough, our logo header should set its own height.
+ * This prevents the page from jumping downwards once the image loads.
+ */
+@media (min-width: 800px) {
+    .logo-full {
+        height: 232px;
+        display: block;
+    }
 }

@@ -3,14 +3,31 @@ layout: default
 ---
 //- This is our standards GG2 website template: standard header and footer
 .page-wrapper
-    .page-content
-        header
-            a#logo(href="/") Gang Garrison 2
+    .page-content(style="position: relative; max-width: 800px; margin-left: auto; margin-right: auto")
+
+        //- Is this the homepage (index.html)?
+        - var isHome = getDocument().getMeta().get('isHome')
+
+        //- This nav menu is inserted into the HTML later (see "mixin nav")
+        mixin nav
+            if !isHome
+                .nav-spacer(style="height: 30px")
             nav
                 ul
                     li: a(href="/") Home
-                    li: a(href="./irc.html?breakcache") IRC
+                    li: a(href="/download.html") Download
                     li: a(href="/forums/") Forums
+                    li: a(href="./irc.html?breakcache") IRC
+
+        if isHome
+            header.fullwidth-container
+                a.logo-full(href="/"): img(src="img/logo.png", alt="Gang Garrison 2")
+                mixin nav
+        else
+            header.fullwidth-container.narrow-header
+                a.logo-mini(href="/") Gang Garrison 2
+                mixin nav
+
 
         .center-column.fullwidth-container
             != content
