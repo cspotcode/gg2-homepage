@@ -193,3 +193,31 @@ footer {
     margin-top: -29px; /* height of the footer */
 }
 
+/* We have two content widths:
+ *   fullwidth (800px) stretches the entire width of our center column, or the entire width of a phone's screen
+ *     Use .fullwidth-container
+ *   inset (764px) has padding on both sides of the center column / small screen
+ *     Use Bootstrap's normal .container
+ */
+.fullwidth-container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 800px) {
+    .fullwidth-container {
+        width: auto;
+    }
+
+    /* We've moved the padding from body onto .container */
+    .container {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+}
+
+.center-column {
+    /*background: #595959;*/
+    background: #505050;
+}
