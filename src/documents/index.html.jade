@@ -21,6 +21,8 @@ article.container
         h2#news News
         if useSSI
             //- TODO add the PHP SSI code
+            //-
+                //#include virtual="/forums/SSI.php?ssi_function=boardNews&board=10.0"
         else
             ul
                 li: a(href="/forums/index.php?topic=33744.0") Server move successful!
