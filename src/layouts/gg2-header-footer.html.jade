@@ -14,18 +14,18 @@ layout: default
                 .nav-spacer(style="height: 30px")
             nav
                 ul
-                    li: a(href="/") Home
-                    li: a(href="/download.html") Download
-                    li: a(href="/forums/") Forums
+                    li: a(href="./") Home
+                    li: a(href="./download.html") Download
+                    li: a(href="./forums/") Forums
                     li: a(href="./irc.html?breakcache") IRC
 
         if isHome
             header.fullwidth-container
-                a.logo-full(href="/"): img(src="img/logo.png", alt="Gang Garrison 2")
+                a.logo-full(href="./"): img(src="./img/logo.png", alt="Gang Garrison 2")
                 mixin nav
         else
             header.fullwidth-container.narrow-header
-                a.logo-mini(href="/") Gang Garrison 2
+                a.logo-mini(href="./")
                 mixin nav
 
 
@@ -38,4 +38,4 @@ footer
         noscript
             a(href="http://flattr.com/thing/304133/Gang-Garrison-2", target="_blank")
                 img(src="http://api.flattr.com/button/flattr-badge-large.png", alt="Flattr this", title="Flattr this", border="0")
-    a(href="/impressum.html") Legal notice (Impressum)
+    a(href="./impressum.html") Legal notice (Impressum)
