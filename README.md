@@ -18,7 +18,7 @@ In a terminal, `cd` into the source code directory and run:
 
 Any time you change the Twitter Bootstrap `.less` files, recompile them by running:
 
-`node build`
+`node build-bs-css`
 
 To rebuild the website and host it on a local webserver, run DocPad like so:
 
@@ -36,5 +36,5 @@ The important bits are:
   * `documents`: rendered by docpad into website pages, css files, or Javascript files.  File extensions tell docpad how to render stuff
   * `files`: copied verbatim by DocPad into the output directory
   * `layouts`: HTML layouts, can be referenced by other layouts or files in the `documents` directory
-* `build.js`: Build script to re-compile Bootstrap's `less` into `css`
+* `build-bs-css.js`: Build script to re-compile Bootstrap's `less` into `css`
 * `docpad.coffee`: CoffeeScript configuration for DocPad; tells it how to build the website
