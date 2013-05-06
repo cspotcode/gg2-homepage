@@ -1,37 +1,40 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com/) skeleton for [DocPad](https://github.com/bevry/docpad)
-Bare essentials for building a modern website with best practices
+# Gang Garrison 2 homepage design
 
+I decided to try my hand at making a homepage design for Gang Garrison 2, using ajf's design as a starting point.
+
+I am also trying to setup a nice development environment for creating the homepage.
+I'm using Bootstrap's responsive grid, scaffolding, and CSS normalizer, HTML5 Boilerplate for the base HTML,
+and Jade templates to build the HTML.  DocPad automatically renders the website in realtime while you're editing.
 
 ## Getting Started
 
-1. [Install DocPad](https://github.com/bevry/docpad)
+You must have **Node.js** installed.  Get it here: [http://nodejs.org](http://nodejs.org)
 
-1. Clone the project and run the server
+Clone this repo or download the code (duh).
 
-	``` bash
-	git clone git://github.com/docpad/html5-boilerplate.docpad.git
-	cd html5-boilerplate.docpad
-	npm install
-	docpad run
-	```
+In a terminal, `cd` into the source code directory and run:
 
-1. [Open http://localhost:9778/](http://localhost:9778/)
+`npm install`
 
-1. Start hacking away by modifying the `src` directory
+Any time you change the Twitter Bootstrap `.less` files, recompile them by running:
 
+`node build`
 
-## License
+To rebuild the website and host it on a local webserver, run DocPad like so:
 
-This skeleton is made ["public domain"](http://en.wikipedia.org/wiki/Public_domain) using the [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/), as such before you publish your website you should place your desired license here and within the `LICENSE.md` file.
+`node_modules/.bin/docpad run`
 
-If you are wanting to open-source your website, we suggest using the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) for content and the [MIT License](http://creativecommons.org/licenses/MIT/) for code. In which case you'd probably want to use the following as your license:
+DocPad should automatically rebuild the website every time a file changes.  If it doesn't, just restart the DocPad server.
 
-	Unless stated otherwise, all content is licensed under the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) and code licensed under the [MIT License](http://creativecommons.org/licenses/MIT/), © [Your Name](http://your.website)
+## Repo structure
 
-If you are wanting to close-source your website, we'd suggest using the following:
+The important bits are:
 
-	Copyright [Your Name](http://your.website). All rights reserved.
-
-Other included things such as themes and libraries are likely already licensed by their own invidual licenses, so be sure to respect their licenses too.
-
-Thanks, the DocPad team loves you.
+* `bootstrap`: Twitter Bootstrap source code, customized for our needs
+* `out`: output directory for DocPad, where the rendered website is saved
+* `src`: DocPad source code, split into three directories:
+  * `documents`: rendered by docpad into website pages, css files, or Javascript files.  File extensions tell docpad how to render stuff
+  * `files`: copied verbatim by DocPad into the output directory
+  * `layouts`: HTML layouts, can be referenced by other layouts or files in the `documents` directory
+* `build.js`: Build script to re-compile Bootstrap's `less` into `css`
+* `docpad.coffee`: CoffeeScript configuration for DocPad; tells it how to build the website
