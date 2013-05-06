@@ -5,14 +5,12 @@ layout: default
 .page-wrapper
 
     //- Background markup
-    .striped-background
+    .background-container
         .extend-center-column-outer
             .extend-center-column-inner
         .background-header
-        .background-stripe1
-        .background-stripe2
-        .background-stripe3
-        .background-stripe4
+        - for(var i = 0; i < 15; i++)
+            div(class="background-stripe#{i}")
 
     .page-content
 

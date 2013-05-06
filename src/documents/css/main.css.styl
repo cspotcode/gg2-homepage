@@ -2,6 +2,21 @@
    Author's custom styles
    ========================================================================== */
 
+// VARIABLES
+
+page-background-color = #c8c8c8 // older value was rgb(114, 98, 85) (brown color)
+center-column-background-color = #413b3b // older values were #454545 and #595959
+nav-background-color = #555555
+footer-background-color = #7E3932;  // old red color
+link-color = orange
+
+render-striped-background = true
+render-gradient-background = false
+
+gradient-background-color-start = rgb(48,30,32)
+gradient-background-color-end = rgb(219,189,164)
+
+// STYLES
 
 body {
 /*    margin: 0;
@@ -9,19 +24,21 @@ body {
     color: black;
     font-family: Arial, sans-serif;*/
     position: relative;
-    background-color: rgb(114, 98, 85);
-    background: url(../img/logorepeat.png), linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
-    background: url(../img/logorepeat.png), -o-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
-    background: url(../img/logorepeat.png), -moz-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
-    background: url(../img/logorepeat.png), -webkit-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
-    background: url(../img/logorepeat.png), -ms-linear-gradient(left bottom, rgb(48,30,32) 18%, rgb(219,189,164) 100%);
-    background: url(../img/logorepeat.png), -webkit-gradient(
-            linear,
-            left bottom,
-            80% 20%,
-            color-stop(0.18, rgb(48,30,32)),
-            color-stop(1, rgb(219,189,164))
-    );
+    background-color: page-background-color;
+    if render-gradient-background {
+        background: url(../img/logorepeat.png), linear-gradient(left bottom, gradient-background-color-start 18%, gradient-background-color-end 100%);
+        background: url(../img/logorepeat.png), -o-linear-gradient(left bottom, gradient-background-color-start 18%, gradient-background-color-end 100%);
+        background: url(../img/logorepeat.png), -moz-linear-gradient(left bottom, gradient-background-color-start 18%, gradient-background-color-end 100%);
+        background: url(../img/logorepeat.png), -webkit-linear-gradient(left bottom, gradient-background-color-start 18%, gradient-background-color-end 100%);
+        background: url(../img/logorepeat.png), -ms-linear-gradient(left bottom, gradient-background-color-start 18%, gradient-background-color-end 100%);
+        background: url(../img/logorepeat.png), -webkit-gradient(
+                linear,
+                left bottom,
+                80% 20%,
+                color-stop(0.18, gradient-background-color-start),
+                color-stop(1, gradient-background-color-end)
+        );
+    }
     background-size: auto, 100%;
     background-repeat: repeat-x;
     background-position: 0 -152px, 0 80px;
@@ -32,7 +49,7 @@ body#home {
 }
 
 a {
-    color: orange;
+    color: link-color;
 }
 
 img {
@@ -75,8 +92,8 @@ header {
 }
 
 .narrow-header {
-    background: rgb(126, 57, 50);
-    background: #7E3932 url(../img/logorepeat.png) repeat-x;
+    background: footer-background-color
+    background: footer-background-color url(../img/logorepeat.png) repeat-x;
     background-position: 0 -152px, 0 80px;
 }
 
@@ -88,6 +105,7 @@ header {
     background-repeat: no-repeat;
     width: 345px;
     float: left;
+    margin-left: 10px;
 }
 
 /* TODO remove this? */
@@ -123,8 +141,7 @@ nav {
 }
 
 #home nav {
-    background-color: rgb(126, 57, 50);
-    background: #555555;
+    background: nav-background-color;
     float: none;
     clear: both;
     margin: 0;
@@ -149,8 +166,11 @@ nav ul li a {
     text-decoration: none;
 }
 
+// Remember the footer's height, used below when flushing it to the bottom of the screen
+footer-height = 29px
+
 footer {
-    background-color: rgb(126, 57, 50);
+    background-color: footer-background-color;
     padding: 4px;
     text-align: center;
     clear: both;
@@ -194,12 +214,12 @@ html, body {
 
 .page-content {
     overflow: auto;
-    padding-bottom: 29px; /* height of the footer */
+    padding-bottom: footer-height;
 }
 
 footer {
     position: relative;
-    margin-top: -29px; /* height of the footer */
+    margin-top: -(footer-height);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -231,8 +251,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .center-column {
-    /*background: #595959;*/
-    background: #454545;
+    background: center-column-background-color;
 }
 
 /* When the screen is wide enough, our logo header should set its own height.
@@ -249,45 +268,63 @@ h1, h2, h3, h4, h5, h6 {
  * handful of distinct colors.  It's created by styling a handful of background divs,
  * cuz I'm bein' pragmatic "like a BOSS!"
  */
-.striped-background {
+
+.background-container {
+    z-index -1
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1;
 }
-[class*="background-stripe"] {
-    height: 150px;
-    z-index: -1;
-}
-.background-header {
-    background: url(../img/logorepeat.png);
-    background-size: auto, 100%;
-    background-repeat: repeat-x;
-    background-position: 0 -152px, 0 80px;
-    height: 80px;
-}
-#home .background-header {
-    background-position: 0 0, 0 232px;
-    height: 232px;
-}
-.background-stripe1 {
-    background: #DBBDA4;
-    /*background-color: rgba(126, 57, 50);*/
-}
-.background-stripe2 {
-    background: #A8917E;
-}
-.background-stripe3 {
-    background: #7F6D5F;
-}
-.background-stripe4 {
-    background: #605348;
-    height: 9999px;
-}
-body {
-    background: #605348;
-}
+
+if render-striped-background
+
+    stripe-darken-factor = 4%
+    stripe-count = 14
+
+    // function to compute a stripe's height
+    stripe-height-function(index) {
+        30px + (10px * index)
+    }
+
+    // function to compute a stripe's color
+    stripe-color-function(index) {
+        darken(page-background-color, stripe-darken-factor * (index - 1))
+    }
+
+    // Function to generate styles for a single stripe
+    background-stripe(index, isLast) {
+        .background-stripe{index} {
+            background: stripe-color-function(index);
+            if isLast {
+                height: 9999px;
+            } else {
+                height: stripe-height-function(index);
+            }
+        }
+    }
+
+    [class*="background-stripe"] {
+        z-index: -1;
+    }
+    .background-header {
+        background: url(../img/logorepeat.png);
+        background-size: auto, 100%;
+        background-repeat: repeat-x;
+        background-position: 0 -152px, 0 80px;
+        height: 80px;
+    }
+    #home .background-header {
+        background-position: 0 0, 0 232px;
+        height: 232px;
+    }
+
+    for i in 1...stripe-count
+        background-stripe(i, false)
+    background-stripe(stripe-count, true)
+
+// These elements sit in the background and have the same color as our center column's background,
+// giving the effect that it extends to the bottom of the page.
 .extend-center-column-outer {
     position: absolute;
     height: 100%;
@@ -298,5 +335,5 @@ body {
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-    background: #454545;
+    background: center-column-background-color;
 }
