@@ -124,6 +124,7 @@ nav {
 
 #home nav {
     background-color: rgb(126, 57, 50);
+    background: #555555;
     float: none;
     clear: both;
     margin: 0;
@@ -188,6 +189,7 @@ html, body {
 
 .page-wrapper {
     min-height: 100%;
+    position: relative;
 }
 
 .page-content {
@@ -230,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .center-column {
     /*background: #595959;*/
-    background: #505050;
+    background: #454545;
 }
 
 /* When the screen is wide enough, our logo header should set its own height.
@@ -241,4 +243,60 @@ h1, h2, h3, h4, h5, h6 {
         height: 232px;
         display: block;
     }
+}
+
+/* For that retro look, the background is a vertical gradient but with only a
+ * handful of distinct colors.  It's created by styling a handful of background divs,
+ * cuz I'm bein' pragmatic "like a BOSS!"
+ */
+.striped-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+[class*="background-stripe"] {
+    height: 150px;
+    z-index: -1;
+}
+.background-header {
+    background: url(../img/logorepeat.png);
+    background-size: auto, 100%;
+    background-repeat: repeat-x;
+    background-position: 0 -152px, 0 80px;
+    height: 80px;
+}
+#home .background-header {
+    background-position: 0 0, 0 232px;
+    height: 232px;
+}
+.background-stripe1 {
+    background: #DBBDA4;
+    /*background-color: rgba(126, 57, 50);*/
+}
+.background-stripe2 {
+    background: #A8917E;
+}
+.background-stripe3 {
+    background: #7F6D5F;
+}
+.background-stripe4 {
+    background: #605348;
+    height: 9999px;
+}
+body {
+    background: #605348;
+}
+.extend-center-column-outer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.extend-center-column-inner {
+    width: 800px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #454545;
 }

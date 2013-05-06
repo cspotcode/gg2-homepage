@@ -3,7 +3,18 @@ layout: default
 ---
 //- This is our standard GG2 website template: standard header and footer
 .page-wrapper
-    .page-content(style="position: relative; max-width: 800px; margin-left: auto; margin-right: auto")
+
+    //- Background markup
+    .striped-background
+        .extend-center-column-outer
+            .extend-center-column-inner
+        .background-header
+        .background-stripe1
+        .background-stripe2
+        .background-stripe3
+        .background-stripe4
+
+    .page-content
 
         //- Is this the homepage (index.html)?
         - var isHome = getDocument().getMeta().get('isHome')
