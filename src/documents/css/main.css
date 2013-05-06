@@ -134,7 +134,7 @@ nav ul li {
     margin: 0 12px;
     display: inline-block;
     font-size: 12pt;
-    font-family: Lucida Console, monospace;
+    font-family: 'Conv_PressStart2P', Lucida Console, monospace;
 }
 nav ul li a {
     color: white;
@@ -191,6 +191,10 @@ html, body {
 footer {
     position: relative;
     margin-top: -29px; /* height of the footer */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Conv_PressStart2P', Lucida Console, monospace;
 }
 
 /* We have two content widths:
