@@ -16,6 +16,7 @@ layout: default
 
         //- Is this the homepage (index.html)?
         - var isHome = getDocument().getMeta().get('isHome')
+        - var showSubNav = getDocument().getMeta().get('showSubNav')
 
         //- This nav menu is inserted into the HTML later (see "mixin nav")
         mixin nav
@@ -37,6 +38,14 @@ layout: default
                     //-li.header-nav-item
                     //-li.header-nav-item
                     //-li.header-nav-end
+            if showSubNav
+                nav.header-sub-nav
+                    ul.header-sub-nav-list
+                        - var navDocs = getCollection('documents').findAll({showInSubNav: true}, function(a, b) { return a.get('subNavPos') > b.get('subNavPos')});
+                        - navDocs.forEach(function(doc) {
+                            li.header-sub-nav-item(class=getDocument() === doc ? "link-to-self" : null)
+                                a(href=getRelativeURL(getDocument().get('url'), doc.get('url')))= doc.get('subNavTitle')
+                        - });
 
         if isHome
             header.fullwidth-container

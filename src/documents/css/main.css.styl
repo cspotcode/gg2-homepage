@@ -8,6 +8,8 @@ page-background-color = #c8c8c8 // older value was rgb(114, 98, 85) (brown color
 center-column-background-color = #413b3b // older values were #454545 and #595959
 nav-background-color = #555555
 nav-text-color = white
+sub-nav-text-color = #aaa
+sub-nav-hover-text-color = white
 footer-background-color = #7E3932;  // old red color
 link-color = orange
 
@@ -197,6 +199,26 @@ table th img {
     width: 100%;
     line-height: 0;
 }
+
+.header-sub-nav {
+    @extend .header-nav;
+    background-color: center-column-background-color;
+}
+.header-sub-nav-list {
+    @extend .header-nav-list;
+}
+.header-sub-nav-item {
+    @extend .header-nav-item;
+    font-size: 10pt;
+    margin: 0 10px 0 10px;
+}
+.header-sub-nav-item a {
+    @extend .header-nav-item a;
+    color: sub-nav-text-color;
+    padding: 4px 4px 4px 6px;
+}
+.header-sub-nav-item.link-to-self a {
+    color: sub-nav-hover-text-color;
 }
 
 // Remember the footer's height, used below when flushing it to the bottom of the screen
