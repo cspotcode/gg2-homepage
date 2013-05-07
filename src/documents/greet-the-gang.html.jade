@@ -1,0 +1,13 @@
+---
+layout: 'gg2-header-footer'
+isHome: true
+showSubNav: true
+showInSubNav: true
+subNavTitle: 'Greet the Gang'
+subNavPos: 3
+---
+
+article.fullwidth-container
+    section.class-select-controller-target
+    script!= "window.classSelectControllerImgDir = \"" + getRelativeURL(getDocument().get('url'), '/ClassSelectController/') + "/\";"
+    script(src=getRelativeURL(getDocument().get('url'), '/ClassSelectController/classSelectController.js'))
