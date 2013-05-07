@@ -7,6 +7,7 @@
 page-background-color = #c8c8c8 // older value was rgb(114, 98, 85) (brown color)
 center-column-background-color = #413b3b // older values were #454545 and #595959
 nav-background-color = #555555
+nav-text-color = white
 footer-background-color = #7E3932;  // old red color
 link-color = orange
 
@@ -134,36 +135,68 @@ table th img {
     float: right;
 }
 
-nav {
+/*
+ * Header's nav-bar
+ */
+
+// Thin nav-bar, on non-home pages
+.header-nav-thin {
     float: left;
     margin-left: 10px;
     /*margin-top: 30px;*/
 }
 
-#home nav {
+.header-nav-spacer {
+    height: 30px;
+}
+
+.header-nav {
     background: nav-background-color;
     float: none;
     clear: both;
     margin: 0;
 }
 
-nav ul {
-    padding: 8px 0 4px;
+.header-nav-list {
+    /*padding: 8px 0 4px;*/
     margin: 0;
     overflow: hidden;
     text-align: center;
 }
 
-nav ul li {
+.header-nav-item {
     /*list-style-type: none;*/
-    margin: 0 6px;
+    /*margin: 0 6px;*/
+    //padding: 8px;
     display: inline-block;
     font-size: 12pt;
     font-family: 'Conv_PressStart2P', Lucida Console, monospace;
 }
-nav ul li a {
-    color: white;
+
+.header-nav .header-nav-item {
+    margin: 0 13px;
+}
+
+.header-nav-item:hover {
+    background-color: darken(nav-background-color, 10%);
+}
+
+.header-nav-item.link-to-self {
+    background-color: center-column-background-color
+}
+
+.header-nav-item a {
+    display: inline-block;
+    padding: 8px 8px 8px 11px;
     text-decoration: none;
+    color: nav-text-color;
+}
+// TODO remove this
+.header-nav-end {
+    display: inline-block;
+    width: 100%;
+    line-height: 0;
+}
 }
 
 // Remember the footer's height, used below when flushing it to the bottom of the screen

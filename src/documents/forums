@@ -1,0 +1,8 @@
+---
+# Generate a nav-bar entry for the forums
+showInNav: true
+navTitle: Forums
+navPos: 2
+# ... but don't put this file in the output directory
+write: false
+---

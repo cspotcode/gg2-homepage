@@ -20,13 +20,23 @@ layout: default
         //- This nav menu is inserted into the HTML later (see "mixin nav")
         mixin nav
             if !isHome
-                .nav-spacer(style="height: 30px")
-            nav
-                ul
-                    li: a(href="./") Home
-                    li: a(href="./download.html") Download
-                    li: a(href="./forums/") Forums
-                    li: a(href="./irc.html?breakcache") IRC
+                .header-nav-spacer
+            nav(class=isHome ? "header-nav" : "header-nav-thin")
+                ul.header-nav-list
+                    //-li.header-nav-item
+                    //-li.header-nav-item
+                    //-li.header-nav-item: a(href="./") Home
+                    //-li.header-nav-item: a(href="./download.html") Download
+                    //-li.header-nav-item: a(href="./forums/") Forums
+                    //-li.header-nav-item: a(href="./irc.html?breakcache") IRC
+                    - var navDocs = getCollection('documents').findAll({showInNav: true}, function(a, b) { return a.get('navPos') > b.get('navPos')});
+                    - navDocs.forEach(function(doc) {
+                        li.header-nav-item(class=getDocument() === doc ? "link-to-self" : null)
+                            a(href=getRelativeURL(getDocument().get('url'), doc.get('url')))= doc.get('navTitle')
+                    - });
+                    //-li.header-nav-item
+                    //-li.header-nav-item
+                    //-li.header-nav-end
 
         if isHome
             header.fullwidth-container
