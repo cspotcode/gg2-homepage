@@ -90,6 +90,10 @@ docpadConfig = {
             # Merge the document keywords with the site keywords
             @site.keywords.concat(@document.keywords or []).join(', ')
 
+        # Get a relative URL from `from` to `to`
+        getRelativeURL: (from, to) ->
+            path = require('path')
+            path.relative(path.dirname(from), to).split(path.sep).join('/') || './'
 
 
     # =================================
