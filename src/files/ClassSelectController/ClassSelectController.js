@@ -116,7 +116,7 @@
             mouse_x = e.pageX - canvas.offsetLeft;
             mouse_y = e.pageY - canvas.offsetTop;
         };
-        document.body.appendChild(canvas);
+        document.getElementsByClassName('class-select-controller-target')[0].appendChild(canvas);
 
         ctx = canvas.getContext('2d');
         ctx.imageSmoothingEnabled = false;
