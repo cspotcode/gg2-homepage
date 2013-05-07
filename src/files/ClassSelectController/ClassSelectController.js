@@ -104,7 +104,7 @@
                     callback();
                 }
             };
-            img.src = data.fname;
+            img.src = window.classSelectControllerImgDir + data.fname;
         });
     }
 
