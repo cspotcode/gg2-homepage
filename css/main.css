@@ -87,33 +87,73 @@ table th {
 table th img {
   float: right;
 }
-nav {
+/*
+ * Header's nav-bar
+ */
+.header-nav-thin {
   float: left;
   margin-left: 10px;
 /*margin-top: 30px;*/
 }
-#home nav {
+.header-nav-spacer {
+  height: 30px;
+}
+.header-nav,
+.header-sub-nav {
   background: #555;
   float: none;
   clear: both;
   margin: 0;
 }
-nav ul {
-  padding: 8px 0 4px;
+.header-nav-list,
+.header-sub-nav-list {
+/*padding: 8px 0 4px;*/
   margin: 0;
   overflow: hidden;
   text-align: center;
 }
-nav ul li {
+.header-nav-item,
+.header-sub-nav-item {
 /*list-style-type: none;*/
-  margin: 0 6px;
+/*margin: 0 6px;*/
   display: inline-block;
   font-size: 12pt;
   font-family: 'Conv_PressStart2P', Lucida Console, monospace;
 }
-nav ul li a {
-  color: #fff;
+.header-nav .header-nav-item {
+  margin: 0 13px;
+}
+.header-nav-item:hover {
+  background-color: #4d4d4d;
+}
+.header-nav-item.link-to-self {
+  background-color: #413b3b;
+}
+.header-nav-item a,
+.header-sub-nav-item a {
+  display: inline-block;
+  padding: 8px 8px 8px 11px;
   text-decoration: none;
+  color: #fff;
+}
+.header-nav-end {
+  display: inline-block;
+  width: 100%;
+  line-height: 0;
+}
+.header-sub-nav {
+  background-color: #413b3b;
+}
+.header-sub-nav-item {
+  font-size: 10pt;
+  margin: 0 10px 0 10px;
+}
+.header-sub-nav-item a {
+  color: #aaa;
+  padding: 4px 4px 4px 6px;
+}
+.header-sub-nav-item.link-to-self a {
+  color: #fff;
 }
 footer {
   background-color: #7e3932;
@@ -292,4 +332,13 @@ h6 {
   margin-left: auto;
   margin-right: auto;
   background: #413b3b;
+}
+.class-select-controller-target {
+  margin-left: -400px;
+  margin-right: -400px;
+}
+.class-select-controller-target canvas {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
