@@ -1,0 +1,23 @@
+---
+layout: 'gg2-header-footer'
+isHome: true
+showSubNav: true
+showInSubNav: true
+subNavTitle: 'News'
+subNavPos: 2
+---
+article.container
+    section
+        h2#news News
+        if useSSI
+            //- TODO add the PHP SSI code
+            //-
+                //#include virtual="/forums/SSI.php?ssi_function=boardNews&board=10.0"
+        else
+            ul
+                li: a(href="/forums/index.php?topic=33744.0") Server move successful!
+                li: a(href="/forums/index.php?topic=33740.0") Downtime notice: GG2(F) is moving server today.
+                li: a(href="/forums/index.php?topic=33610.0") Gang Garrison 2.5.1
+                li: a(href="/forums/index.php?topic=33601.0") Gang Garrison 2.5
+                li: a(href="/forums/index.php?topic=33584.0") Haxxy reward logins have been sent out
+                li: a(href="/forums/index.php?topic=33402.0") Downtime notice / possible change of hosting
