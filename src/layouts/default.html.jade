@@ -25,7 +25,7 @@ html.no-js
         //- DocPad Styles + Our Own
         != getBlock('styles').add(site.styles).toHTML()
 
-        link(rel='stylesheet', href='css/bootstrap.min.css')
+        link(rel='stylesheet', href=getRelativeURL(getDocument().get('url'), '/css/bootstrap.min.css'))
         style
             /*
             body {
@@ -33,9 +33,9 @@ html.no-js
                 padding-bottom: 40px;
             }
             */
-        link(rel='stylesheet', href='css/bootstrap-responsive.min.css')
-        link(rel='stylesheet', href='press-start-2p/converted-via-font2web.com/fonts.css')
-        link(rel='stylesheet', href='css/main.css')
+        link(rel='stylesheet', href=getRelativeURL(getDocument().get('url'), '/css/bootstrap-responsive.min.css'))
+        link(rel='stylesheet', href=getRelativeURL(getDocument().get('url'), '/press-start-2p/converted-via-font2web.com/fonts.css'))
+        link(rel='stylesheet', href=getRelativeURL(getDocument().get('url'), '/css/main.css'))
 
         //- TODO re-enable this once we figure out how to render all these icons from our source image
             // Icons
@@ -50,7 +50,7 @@ html.no-js
             // For third-generation iPad with high-resolution Retina display:
             link(rel="apple-touch-icon-precomposed", sizes="144x144", href="icons/apple-touch-icon-144x144-precomposed.png")
 
-        script(src='js/vendor/modernizr-2.6.2-respond-1.1.0.min.js')
+        script(src=getRelativeURL(getDocument().get('url'), '/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js'))
 
     body(id=getDocument().getMeta().get('isHome') ? "home" : false)
         //if lt IE 7
@@ -71,17 +71,16 @@ html.no-js
 
         //- jQuery
         script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
-        script
-            window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
+        script!= "window.jQuery || document.write('<script src=\"" + getRelativeURL(getDocument().get('url'), '/js/vendor/jquery-1.9.1.min.js') + "\"><\\/script>')"
 
         //- Bootstrap
-        script(src='js/vendor/bootstrap.min.js')
+        script(src=getRelativeURL(getDocument().get('url'), '/js/vendor/bootstrap.min.js'))
 
         //- H5BP's plugins.js
-        script(src='js/plugins.js')
+        script(src=getRelativeURL(getDocument().get('url'), '/js/plugins.js'))
 
         //- Our scripts
-        //-script(src='js/main.js')
+        //-script(src=getRelativeURL(getDocument().get('url'), '/js/main.js'))
 
         //- Google Analytics
         //- TODO re-enable this?
