@@ -13,6 +13,7 @@ docpadConfig = {
         jade:
             jadeOptions:
                 basedir: require('path').resolve './src'
+                pretty: false
 
     # =================================
     # Template Data
